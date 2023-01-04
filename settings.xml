@@ -17,7 +17,7 @@ software distributed under the License is distributed on an
 KIND, either express or implied.  See the License for the
 specific language governing permissions and limitations
 under the License.
-i-->
+-->
 
 <!--
  | This is the configuration file for Maven. It can be specified at two levels:
@@ -43,9 +43,9 @@ i-->
  | values (values used when the setting is not specified) are provided.
  |
  |-->
-<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
   <!-- localRepository
    | The path to the local repository maven will use to store artifacts.
    |
@@ -117,17 +117,16 @@ i-->
      |       used together.
      |
     <server>
-      <id>nexus</id>
-      <username>admin</username>
-      <password>admin123</password>
+      <id>deploymentRepo</id>
+      <username>repouser</username>
+      <password>repopwd</password>
     </server>
     -->
     <server>
-      <id>nexus</id>
+      <id>nexusinstance</id>
       <username>admin</username>
-      <password>admin123</password>
+      <password>nexus80</password>
     </server>
-
 
     <!-- Another sample, using keys to authenticate.
     <server>
@@ -162,13 +161,6 @@ i-->
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
-    <mirror>
-      <id>maven-default-http-blocker</id>
-      <mirrorOf>external:http:*</mirrorOf>
-      <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
-      <url>http://0.0.0.0/</url>
-      <blocked>true</blocked>
-    </mirror>
   </mirrors>
 
   <!-- profiles
