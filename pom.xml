@@ -19,16 +19,16 @@
 		</dependency>
 
 	</dependencies>
-<distributionManagement>
-    <repository>
-      <id>nexusinstance</id>
-      <name>release-maven</name>
-      <url>http://20.199.22.41:8081/repository/release-maven/</url>
-    </repository>
-    <snapshotRepository>
-      <id>nexusinstance</id>
-      <name>snapshots-maven</name>
-      <url>http://20.199.22.41:8081/repository/snapshots-maven/</url>
-    </snapshotRepository>
-  </distributionManagement>
+    	<distributionManagement>
+       	 <repository>
+            <id>nexusinstance</id>
+            <name>release-maven</name>
+            <url>http://20.199.22.41:8081/repository/release-maven/</url>
+       	 </repository>
+         <snapshotRepository>
+            <id>nexusinstance</id>
+            <name>snapshots-maven</name>
+            <url>http://20.199.22.41:8081/repository/snapshots-maven/</ur>
+         </snapshotRepository>
+    	</distributionManagement>
 </project>
