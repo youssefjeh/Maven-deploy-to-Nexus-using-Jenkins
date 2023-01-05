@@ -28,6 +28,7 @@ pipeline {
               -Dusername=${NEXUS_USERNAME} \
               -Dpassword=${NEXUS_PASSWORD}
             """
+          }
         }
       }
     }
