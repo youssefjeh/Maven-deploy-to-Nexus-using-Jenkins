@@ -22,8 +22,8 @@ pipeline {
       
       steps {
         script{
-          withCredentials([usernamePassword(credentialsId: 'nexus credentials', variable: 'NEXUS_CREDENTIALS')]) {
-            sh "mvn deploy -DaltDeploymentRepository=releases::default::http://20.199.22.41:8081/repository/release-maven/ -Dusername=admin -Dpassword=${NEXUS_CREDENTIALS}"
+          withCredentials([usernamePassword(credentialsId: 'nexus credentials',usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD]) {
+            sh "mvn deploy -DaltDeploymentRepository=releases::default::http://20.199.22.41:8081/repository/release-maven/ -Dusername=${USERNAME} -Dpassword=${PASSWORD}"
           }
         }
       }
