@@ -1,4 +1,5 @@
 @Library('jenkins-SL') 
+def gv
 pipeline {
   agent any
   tools {
