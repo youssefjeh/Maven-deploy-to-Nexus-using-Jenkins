@@ -28,7 +28,7 @@
          <snapshotRepository>
             <id>nexusinstance</id>
             <name>snapshots-maven</name>
-            <url>http://20.199.22.41:8081/repository/snapshots-maven/</ur>
+            <url>http://20.199.22.41:8081/repository/snapshots-maven/</url>
          </snapshotRepository>
     	</distributionManagement>
 </project>
