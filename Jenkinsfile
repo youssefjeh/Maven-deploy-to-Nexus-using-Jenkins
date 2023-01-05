@@ -18,11 +18,16 @@ pipeline {
       }
     }
 
-    stage("build docker image") {
+    stage("Deploy") {
       
       steps {
         script{
-          echo "build docker img"
+          withCredentials([usernamePassword(credentialsId: '	nexus credentials', usernameVariable: 'NEXUS_USERNAME', passwordVariable: 'NEXUS_PASSWORD')]) {
+            sh """
+            mvn deploy -DaltDeploymentRepository=releases::default::http://20.199.22.41:8081/repository/release-maven/ \
+              -Dusername=${NEXUS_USERNAME} \
+              -Dpassword=${NEXUS_PASSWORD}
+            """
         }
       }
     }
