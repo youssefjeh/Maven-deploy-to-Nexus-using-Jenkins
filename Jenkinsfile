@@ -1,3 +1,4 @@
+@Library('jenkins-SL') 
 pipeline {
   agent any
   tools {
@@ -11,6 +12,7 @@ pipeline {
       steps {
         script{
             echo "build jar"
+            buildJar()
         }
       }
     }
